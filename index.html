@@ -38,6 +38,16 @@
     </section>
     <section class="section-head geometry-heading"><div><span class="eyebrow">مختبر الهندسة</span><h2>استكشف مساحة المربع ومحيطه</h2></div><span class="term-label">تجربة تفاعلية</span></section>
     <section class="geometry-lab" id="geometryLab"></section>
+    <section class="section-head solid3d-heading"><div><span class="eyebrow">مختبر المجسمات ثلاثي الأبعاد</span><h2>دوّر المجسم واكتشف أبعاده</h2></div><span class="term-label">تفاعل باللمس أو الفأرة</span></section>
+    <section class="solid3d-panel" id="solid3dLab">
+      <div class="solid3d-view"><canvas id="solidCanvas" aria-label="مجسم متوازي مستطيلات ثلاثي الأبعاد قابل للدوران"></canvas><div class="view-hint">اسحب بإصبعك لتدوير المجسم • قرّب بإصبعين</div><div class="view-tools"><button id="zoomOut" type="button" aria-label="تصغير">−</button><button id="resetView" type="button">إعادة العرض</button><button id="zoomIn" type="button" aria-label="تكبير">＋</button></div></div>
+      <div class="solid3d-controls"><p>غيّر أبعاد المجسم وشاهد شكله وحجمه يتغيران مباشرة.</p>
+        <label for="length3d">الطول <b id="length3dValue">٦</b></label><input id="length3d" type="range" min="2" max="10" value="6">
+        <label for="width3d">العرض <b id="width3dValue">٤</b></label><input id="width3d" type="range" min="2" max="10" value="4">
+        <label for="height3d">الارتفاع <b id="height3dValue">٣</b></label><input id="height3d" type="range" min="2" max="10" value="3">
+        <div class="solid3d-results"><div><small>الحجم</small><b id="volume3d">٧٢ وحدة³</b></div><div><small>مجموع أطوال الأحرف</small><b id="edges3d">٥٢ وحدة</b></div></div>
+      </div>
+    </section>
     <section class="section-head quiz-heading"><div><span class="eyebrow">تحدّ نفسك</span><h2>سؤال سريع</h2></div><span class="term-label">اختبر فهمك</span></section>
     <section class="quiz-card" id="quizCard"></section>
     <footer><div class="brand footer-brand"><span class="brand-mark">م</span><span><b>مدرستي الذكية</b><small>التعلم حق للجميع</small></span></div><p>نسخة تجريبية تعليمية مجانية • الصف التاسع – الرياضيات</p><span class="version">الإصدار 0.1.0</span></footer>
@@ -45,5 +55,6 @@
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="./app.js" defer></script>
   <script src="./geometry.js" defer></script>
+  <script src="./solid3d.js" defer></script>
 </body>
 </html>
