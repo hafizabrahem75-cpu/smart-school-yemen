@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="مدرستي الذكية: تعلم الرياضيات للصف التاسع بطريقة تفاعلية.">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <title>مدرستي الذكية | رياضيات الصف التاسع</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="مدرستي الذكية - الرئيسية"><span class="brand-mark">م</span><span><b>مدرستي الذكية</b><small>نتعلم لنفهم</small></span></a>
+    <div class="top-actions"><span class="grade-chip">الصف التاسع</span><button class="icon-btn" id="installBtn" hidden title="تثبيت التطبيق">＋ تثبيت</button></div>
+  </header>
+  <main class="shell">
+    <section class="welcome">
+      <div class="welcome-copy"><span class="eyebrow">رحلتك التعليمية تبدأ هنا</span><h1>الرياضيات، <em>بطريقة أذكى.</em></h1><p>افهم الفكرة، جرّب بنفسك، واختبر تقدمك خطوة بخطوة.</p><div class="welcome-meta"><span>◷ تعلم في وقتك</span><span>✦ أنشطة تفاعلية</span><span>✓ تقدم محفوظ</span></div></div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="math-card"><span>س</span><strong> x + ٥ = ١٢ </strong><small>اكتشف قيمة المجهول</small></div><b class="float f1">π</b><b class="float f2">√</b><b class="float f3">∑</b></div>
+    </section>
+    <section class="stats" aria-label="ملخص التقدم">
+      <article><span class="stat-icon purple">▤</span><div><b id="lessonCount">٤</b><small>دروس متاحة</small></div></article>
+      <article><span class="stat-icon mint">✓</span><div><b id="completedCount">٠</b><small>دروس مكتملة</small></div></article>
+      <article><span class="stat-icon amber">⚡</span><div><b id="progressPercent">٠٪</b><small>إنجازك الحالي</small></div></article>
+    </section>
+    <section class="section-head"><div><span class="eyebrow">المسار الدراسي</span><h2>اختر درساً وابدأ التعلّم</h2></div><span class="term-label">الرياضيات • الفصل الأول</span></section>
+    <section class="lesson-grid" id="lessonGrid"></section>
+    <section class="practice-panel">
+      <div class="practice-intro"><span class="eyebrow">مختبر الرياضيات</span><h2>جرّب بنفسك</h2><p>غيّر قيمة العدد وشاهد كيف تتغير نتيجة المعادلة أمامك.</p><div class="equation-large">ص = ٢س + ١</div></div>
+      <div class="experiment">
+        <label for="xRange">اختر قيمة س: <strong id="xValue">٢</strong></label>
+        <input id="xRange" type="range" min="-5" max="5" value="2" step="1">
+        <div class="result-box"><span>الناتج ص</span><b id="yValue">٥</b><small id="calcText">ص = ٢ × ٢ + ١</small></div>
+        <div class="mini-chart" id="miniChart" aria-label="تمثيل تقريبي للناتج"></div>
+      </div>
+    </section>
+    <section class="section-head quiz-heading"><div><span class="eyebrow">تحدّ نفسك</span><h2>سؤال سريع</h2></div><span class="term-label">اختبر فهمك</span></section>
+    <section class="quiz-card" id="quizCard"></section>
+    <footer><div class="brand footer-brand"><span class="brand-mark">م</span><span><b>مدرستي الذكية</b><small>التعلم حق للجميع</small></span></div><p>نسخة تجريبية تعليمية مجانية • الصف التاسع – الرياضيات</p><span class="version">الإصدار 0.1.0</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
