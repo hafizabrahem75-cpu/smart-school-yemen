@@ -1,0 +1,7 @@
+(function(){
+const host=document.getElementById("geometryLab");if(!host)return;
+host.innerHTML=`<div class="geometry-controls"><label>طول الضلع: <strong id="sideValue">٥</strong> سم</label><input id="sideRange" type="range" min="1" max="10" value="5"><p>غيّر طول ضلع المربع ولاحظ كيف يتغير المحيط والمساحة.</p><div class="geometry-results"><div><small>المحيط</small><b id="perimeter">٢٠ سم</b></div><div><small>المساحة</small><b id="area">٢٥ سم²</b></div></div></div><div class="geometry-drawing"><svg viewBox="0 0 220 220" role="img" aria-label="رسم مربع يتغير حجمه"><rect id="squareShape" x="60" y="60" width="100" height="100" rx="5"/><text x="110" y="48" text-anchor="middle">ضلع</text><text x="110" y="183" text-anchor="middle">مربع</text></svg></div>`;
+const range=host.querySelector("#sideRange"),ar=n=>String(n).replace(/\\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+function update(){const s=Number(range.value),size=s*14;host.querySelector("#sideValue").textContent=ar(s);host.querySelector("#perimeter").textContent=ar(4*s)+" سم";host.querySelector("#area").textContent=ar(s*s)+" سم²";const rect=host.querySelector("#squareShape");rect.setAttribute("width",size);rect.setAttribute("height",size);rect.setAttribute("x",(220-size)/2);rect.setAttribute("y",(220-size)/2);}
+range.addEventListener("input",update);update();
+})();
